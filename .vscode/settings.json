@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "ios": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "iomanip": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "__locale": "cpp",
+        "locale": "cpp",
+        "fstream": "cpp"
+    }
+}

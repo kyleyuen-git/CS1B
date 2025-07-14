@@ -1,0 +1,10 @@
+int mult = 5*3;
+int* ptr = &mult;
+cout<<*ptr;
+int numbers[] = { 2, 4, 6, 8, 10 };
+cout << *(numbers + 3) << endl;
+prints 8?
+
+double value = 29.7; 
+double *ptr = &value;
+cout<<*ptr<<endl;
