@@ -60,3 +60,31 @@ int main()
     return 0;
 
 }
+
+
+/* ================================ Output ===================================
+
+Enter the first president's number: 37
+Enter his name: Richard Nixon
+Enter his quote: I am not a crook.
+
+Enter the second president's number: 45
+Enter his name: Donald Trump
+Enter his quote: Is our country still spending money on the GLOBAL WARMING HOAX?
+
+Enter the third president's number: 42
+Enter his name: Bill Clinton
+Enter his quote: I did not have sexual relations with that woman.
+
+The presidents are:
+
+Richard Nixon, 37th president, said:
+    "I am not a crook."
+
+Donald Trump, 45th president, said:
+    "Is our country still spending money on the GLOBAL WARMING HOAX?"
+
+Bill Clinton, 42th president, said:
+    "I did not have sexual relations with that woman."
+
+============================================================================= */ 

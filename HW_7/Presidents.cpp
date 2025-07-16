@@ -26,5 +26,6 @@ void Presidents::setQuote(string quote)
 
 void Presidents::displayPresidents()const
 {
-    cout<<name<<", "<<number<<"th president, said:\n    "<<quote;
+    cout<< name << ", " << number << "th president, said:\n"
+      << "    \"" << quote << "\"\n\n";
 }
