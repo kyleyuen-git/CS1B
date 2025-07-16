@@ -38,7 +38,6 @@ struct Cat
 
 int main()
 {
-    // ======================== Part D ========================
     Cat cat; // single Cat object reused for each record
     int count = 0; // number of cats entered so far
 
