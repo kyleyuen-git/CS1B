@@ -15,7 +15,6 @@ int main()
     cout << "\nHere is student #2:\n";
     s2.displayRecord();
 
-
     s1.setID(100);
     s1.setName("John Lee Hooker");
     s1.setUnits(15);
@@ -27,6 +26,13 @@ int main()
     UnderGrad underGrad(100, "Tom Lee", 9, "Freshman");
     Grad grad(101, "Jim Jones", 12, "PHD");
 
+    cout<<"\nUndergrad record: \n";
     underGrad.displayRecord();
+
+    cout<<"\nGrad record: \n";
+    grad.displayRecord();
+
+    grad.setUnits(15);
+    cout<<"\nGrad record after setUnits(15): \n";
     grad.displayRecord();
 }
