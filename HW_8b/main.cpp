@@ -1,4 +1,10 @@
 // ===========================================================
+// Programmer: Kyle Yuen
+// Class: CS 1B
+// Instructor: Med Mogasemi
+// ===========================================================
+// Program: HW_8b - Multiple Inheritance
+// ===========================================================
 // File: Source.cpp
 // ===========================================================
 // Description: This program demonstrates a hierarchy of classes as follows:
@@ -50,3 +56,20 @@ int main()
 return 0;
 }
 // ===========================================================
+
+/* ================================ Output ===================================
+
+The student's grade on Exam #1 is B
+
+---------------------------
+
+How many questions are on the exam? 30
+How many questions did the student miss? 3
+Enter the minimum passing score for this test: 21
+
+Each question counts 3.3 points.
+The minimum passing score is 21.0
+The student's exam score is 90.0
+The student's grade on Exam #2 is P
+
+============================================================================= */
