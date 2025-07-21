@@ -21,16 +21,21 @@ void PassFailActivity::setMinPassingScore(double mps)
     this->minPassingScore = mps;
 }
 
+// Note for teacher: In the instructions, it says to return P or F for getMinPassingScore()
+// and to "redefine" getLetterGrade() from GradedActivity.
+// I might be wrong, but it sounds like the "return P or F" should be for getLetterGrade()
+// so that is what I wrote below. 
+
 double PassFailActivity::getMinPassingScore()
 {
-    if(score>=minPassingScore) // can't use score because it is protected in base class, need to use getScore()
-    return 'P';
-    else
-    return 'F';
+    return minPassingScore;
 }
 
 char PassFailActivity::getLetterGrade()
 {
-
+    if(score>=minPassingScore) // can't use score because it is protected in base class, need to use getScore()
+        return 'P';
+    else
+        return 'F';
 } // virtual keyword not needed since it was declared in base class
                         // overridden function 
