@@ -1,3 +1,7 @@
+// ===========================================================
+// File: Grad.cpp
+// ===========================================================
+
 #include "Grad.h"
 
 // ==== Grad::Grad ========================================
@@ -25,7 +29,8 @@ Grad::~Grad(){} // Grad destructor
 // ========================================================
 void Grad::displayRecord()const
 {
-    Student::displayRecord(); // use Student class's already made displayRecord() with scope 
+    // use Student class's already made displayRecord() with scope 
+    Student::displayRecord();
     cout<<"Degree: "<<degree<<"\n";
 }
-// =====================================================================
+// ========================================================

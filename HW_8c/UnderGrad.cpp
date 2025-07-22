@@ -1,3 +1,7 @@
+// ===========================================================
+// File: UnderGrad.cpp
+// ===========================================================
+
 #include "UnderGrad.h"
 
 // ==== UnderGrad::UnderGrad =============================
@@ -5,10 +9,7 @@
 // Calls base Student constructor to set ID, name, and units,
 // then sets the level
 // Input:
-//   id    – student ID
-//   name  – full name
-//   units – number of enrolled units
-//   level – classification (e.g., Freshman, Sophomore)
+//   id, name, units, level
 // ========================================================
 // UnderGrad constructor includes UnderGrad scope and parameters
 // then, you need to scope into Student overloaded constructor to set the first three variables
@@ -29,7 +30,10 @@ UnderGrad::~UnderGrad(){} // UnderGrad destructor
 void UnderGrad::displayRecord()const
 {
     // reuse base method
-    Student::displayRecord(); // use Student class's already made displayRecord() with scope 
-    cout<<"Class: "<<level<<"\n"; // add UnderGrad's new level at the end  
+    // use Student class's already made displayRecord() with scope 
+    Student::displayRecord(); 
+    
+    // add UnderGrad's new level at the end
+    cout<<"Class: "<<level<<"\n";   
 }
 // ========================================================

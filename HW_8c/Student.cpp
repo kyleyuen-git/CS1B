@@ -1,3 +1,7 @@
+// ===========================================================
+// File: Student.cpp
+// ===========================================================
+
 #include "Student.h"
 
 // ==== Student::Student =================================
@@ -15,14 +19,11 @@ Student::Student()
 }
 */
 
-
 // ==== Student::Student =================================
 // Overloaded constructor
 // Initializes all data members using provided values.
 // Input:
-//   id    – student's ID number
-//   name  – student's full name
-//   units – number of units the student is taking
+//   id, name, units
 // ========================================================
 Student::Student(int id, const string& name, int units): id(id), name(name), units(units){}
 
