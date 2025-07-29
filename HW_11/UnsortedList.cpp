@@ -43,6 +43,7 @@ bool UnsortedList::isFull()
     {
         return true;
     }
+    return false;
 }
 
 // returns true if the list is empty
@@ -53,4 +54,15 @@ bool UnsortedList::isEmpty()
     {
         return true;
     }
+    return false;
+}
+
+void UnsortedList::printList() const
+{
+    cout << "Current list: ";
+    for (int i = 0; i<length; i++)
+    {
+        cout << numbers[i] << " ";
+    }
+    cout << "\n\n";
 }

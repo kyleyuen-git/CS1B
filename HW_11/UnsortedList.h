@@ -32,4 +32,7 @@ public:
     // returns true if the list is empty
     // must be called before the deleteItem method is called
     bool isEmpty();
+
+    // displays the list 
+    void printList() const;
 };
