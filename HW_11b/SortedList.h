@@ -1,5 +1,5 @@
 // ===========================================================
-// File: UnsortedList.h
+// File: SortedList.h
 // ===========================================================
 
 # pragma once
@@ -12,7 +12,7 @@ using namespace std;
 // Maximum number of integers in the list
 static const int MAX_SIZE = 10;
 
-class UnsortedList
+class SortedList
 {
 private:
     int numbers[MAX_SIZE]; // Array to hold list elements
@@ -20,9 +20,9 @@ private:
 
 public:
     // default constructor that Sets the list to an empty list
-    UnsortedList(); 
+    SortedList(); 
     // destructor
-    ~UnsortedList();
+    ~SortedList();
 
     // item is inserted into the list
     void insertItem(int item);

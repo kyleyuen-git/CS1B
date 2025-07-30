@@ -1,21 +1,40 @@
+// ===========================================================
+// File: UnsortedList.cpp
+// ===========================================================
+
 # include "UnsortedList.h"
 
-// default constructor that Sets the list to an empty list
+// ===========================================================
+// Constructor: Initializes the list to an empty state.
+// ===========================================================
 UnsortedList::UnsortedList()
 {
     length = 0; // Sets the list to an empty list
 }
-// destructor
+// ===========================================================
+
+// ===========================================================
+// Destructor: Default. No dynamic memory cleanup needed
+// ===========================================================
 UnsortedList::~UnsortedList() = default;
 
-// item is inserted into the list
+// ===========================================================
+// insertItem: Inserts item at the end of the list.
+// Input: item
+// Output: none
+// ===========================================================
 void UnsortedList::insertItem(int item)
 {
     numbers[length] = item; // length starts at 0
     length++;
 }
+// ===========================================================
 
-// item is deleted from the list
+// ===========================================================
+// deleteItem: Searches and deletes one occurrence of item.
+// Input: item
+// Output: Message if item not found or deleted
+// ===========================================================
 void UnsortedList::deleteItem(int item)
 {
     int temp = length;
@@ -34,8 +53,12 @@ void UnsortedList::deleteItem(int item)
         cout << "Item is not in list.\n";
     }
 }
+// ===========================================================
 
-// returns true if the list is full
+// ===========================================================
+// isFull: Returns true if list is full.
+// Output: true/false
+// ===========================================================
 // method must be called before the insertItem method is called
 bool UnsortedList::isFull()
 {
@@ -45,8 +68,12 @@ bool UnsortedList::isFull()
     }
     return false;
 }
+// ===========================================================
 
-// returns true if the list is empty
+// ===========================================================
+// isEmpty: Returns true if list is empty.
+// Output: true/false
+// ===========================================================
 // must be called before the deleteItem method is called
 bool UnsortedList::isEmpty()
 {
@@ -56,7 +83,12 @@ bool UnsortedList::isEmpty()
     }
     return false;
 }
+// ===========================================================
 
+// ===========================================================
+// printList: Outputs current contents of the list.
+// Output: printed list to console
+// ===========================================================
 void UnsortedList::printList() const
 {
     cout << "Current list: ";
@@ -66,3 +98,4 @@ void UnsortedList::printList() const
     }
     cout << "\n\n";
 }
+// ===========================================================
