@@ -35,17 +35,17 @@ void SortedList::insertItem(int item)
 }
 // ===========================================================
 
-// item is deleted from the list uisng the index found by the
-// binarySearch()
 // ===========================================================
 // deleteItem: Deletes the specified item if found.
 // Input: item
 // ===========================================================
+// item is deleted from the list uisng the index found by the
+// linearSearch()
 void SortedList::deleteItem(int item)
 {
     int location{};
 
-    location = binarySearch(item);
+    location = linearSearch(item);
 
     if(location < length)
     {
@@ -99,6 +99,22 @@ int SortedList::binarySearch(int num)
     }
 
     return first;
+}
+// ===========================================================
+
+// ===========================================================
+// linearSearch: Finds the index where the given number
+// should be deleted scanning linearly.
+// ===========================================================
+int SortedList::linearSearch(int num)
+{
+    int location{};
+
+    // Move forward in the list until the correct spot is found
+    while (location < length && numbers[location] < num) {
+        ++location;
+    }
+    return location;
 }
 // ===========================================================
 

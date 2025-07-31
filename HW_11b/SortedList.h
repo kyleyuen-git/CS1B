@@ -30,8 +30,11 @@ public:
     // item is deleted from the list
     void deleteItem(int item);
 
-    // Finds index to insert or locate item with binary search algorithm 
+    // Finds index to insert item with binary search algorithm 
     int binarySearch(int num);
+
+    // Finds index to delete item with linear search algorithm 
+    int linearSearch(int num);
 
     // returns true if the list is full
     // method must be called before the insertItem method is called
