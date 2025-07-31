@@ -15,15 +15,15 @@ SortedList::SortedList() : length(0) {}
 SortedList::~SortedList() = default;
 
 // item is inserted into the list using the index found by
-// the binarySearch() 
+// the linearSearch() 
 // ===========================================================
-// insertItem: Inserts item in sorted order using binarySearch.
+// insertItem: Inserts item in sorted order using linearSearch.
 // Input: item
 // ===========================================================
 void SortedList::insertItem(int item)
 {
     int location{};
-    location = binarySearch(item);
+    location = linearSearch(item);
 
     for(int i = length; i>location; i--)
     {
@@ -40,12 +40,12 @@ void SortedList::insertItem(int item)
 // Input: item
 // ===========================================================
 // item is deleted from the list uisng the index found by the
-// linearSearch()
+// binarySearch()
 void SortedList::deleteItem(int item)
 {
     int location{};
 
-    location = linearSearch(item);
+    location = binarySearch(item);
 
     if(location < length)
     {
@@ -64,7 +64,7 @@ void SortedList::deleteItem(int item)
 // ===========================================================
 
 // ===========================================================
-// binarySearch: Finds index of item or insertion point in average case
+// binarySearch: Finds index of item for deletion in average case
 // of O(log n) time by dividing SORTED ARRAY in half 
 // Input: num
 // Output: index (int)
@@ -104,7 +104,7 @@ int SortedList::binarySearch(int num)
 
 // ===========================================================
 // linearSearch: Finds the index where the given number
-// should be deleted scanning linearly.
+// should be inserted scanning linearly.
 // ===========================================================
 int SortedList::linearSearch(int num)
 {
