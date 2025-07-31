@@ -22,15 +22,20 @@ SortedList::~SortedList() = default;
 // ===========================================================
 void SortedList::insertItem(int item)
 {
-    int location{};
-    location = linearSearch(item);
+    // Find position to insert
+    int location = linearSearch(item);
 
+    // Shift elements to the right from location to end
     for(int i = length; i>location; i--)
     {
+        // Move one spot right
         numbers[i] = numbers[i-1];
     }
 
+    // Insert the new item at the correct location
     numbers[location] = item;
+
+    // Increase list size
     length++;
 }
 // ===========================================================
@@ -43,21 +48,24 @@ void SortedList::insertItem(int item)
 // binarySearch()
 void SortedList::deleteItem(int item)
 {
-    int location{};
+    // Find index where item may exist
+    int location = binarySearch(item);
 
-    location = binarySearch(item);
-
+    // If item is found within valid list range
     if(location < length)
     {
         for(int i = location + 1; i < length; i++)
         {
+            // Shift elements left from location+1 to end
             numbers[i-1] = numbers[i];
         }
 
+        // Decrease list size
         length--;
     }
     else
     {
+        // Item was not found
         cout<<"The number is not in the list.\n\n";
     }
 }
@@ -75,12 +83,13 @@ int SortedList::binarySearch(int num)
     int midpoint{};
     int last = length - 1;
 
+    // Continue search while range is valid
     while(first <= last)
     {
         midpoint = (first + last)/2;
         if(numbers[midpoint] == num)
         {
-            return midpoint;
+            return midpoint; // Match found
         }
         // When you compare against the middle element and see it’s not what you’re looking for,
         // you know that you can exclude that middle index from all further consideration
@@ -125,6 +134,7 @@ int SortedList::linearSearch(int num)
 // method must be called before the insertItem method is called
 bool SortedList::isFull()
 {
+    // If the number of elements equals array capacity, return true
     if(length == MAX_SIZE)
     {
         return true;
@@ -140,6 +150,7 @@ bool SortedList::isFull()
 // must be called before the deleteItem method is called
 bool SortedList::isEmpty()
 {
+    // If list has no elements, it's empty
     if(length == 0)
     {
         return true;
@@ -155,6 +166,7 @@ bool SortedList::isEmpty()
 void SortedList::printList() const
 {
     cout << "Current list: ";
+    // Loop through all valid list elements
     for (int i = 0; i<length; i++)
     {
         cout << numbers[i] << " ";

@@ -26,7 +26,7 @@ UnsortedList::~UnsortedList() = default;
 void UnsortedList::insertItem(int item)
 {
     numbers[length] = item; // length starts at 0
-    length++;
+    length++; // Increase the number of items in the list
 }
 // ===========================================================
 
@@ -42,12 +42,18 @@ void UnsortedList::deleteItem(int item)
     {
         if(numbers[i] == item)
         {
+            // Replace this item with the last item in the list
+            // This avoids shifting but loses ordering 
+            // (which is okay in unsorted list)
             numbers[i] = numbers[length-1];
+
+            // Reduce the list size
             length--;
             cout << "Item has been deleted.\n";
             break; // stop after deleting one
         }
     }
+    // If length hasn't changed, item was never found
     if (temp == length)
     {
         cout << "Item is not in list.\n";
@@ -62,6 +68,7 @@ void UnsortedList::deleteItem(int item)
 // method must be called before the insertItem method is called
 bool UnsortedList::isFull()
 {
+    // If the number of elements equals array capacity, return true
     if(length == MAX_SIZE)
     {
         return true;
@@ -77,6 +84,7 @@ bool UnsortedList::isFull()
 // must be called before the deleteItem method is called
 bool UnsortedList::isEmpty()
 {
+    // If list has no elements, it's empty
     if(length == 0)
     {
         return true;
@@ -92,6 +100,7 @@ bool UnsortedList::isEmpty()
 void UnsortedList::printList() const
 {
     cout << "Current list: ";
+    // Loop through all valid list elements
     for (int i = 0; i<length; i++)
     {
         cout << numbers[i] << " ";
