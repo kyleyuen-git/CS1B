@@ -68,8 +68,8 @@ int main()
 // showMenu: Displays menu options to the user.
 // ===========================================================
 void showMenu() {
-    cout << "a) Insert a number into the sorted list.\n"
-         << "b) Delete a number from the sorted list.\n"
+    cout << "a) Insert a number into the unsorted list.\n"
+         << "b) Delete a number from the unsorted list.\n"
          << "x) Exit.\n";
 }
 
